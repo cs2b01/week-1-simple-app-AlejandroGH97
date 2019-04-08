@@ -2,11 +2,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+<title>Login Screen</title>
 </head>
 
 <body>
-Content of the document......
+  <p><input type="text" id="us" placeholder="Username"/></p>
+  <p><input type="password" id="ps" placeholder="Password"/></p>
+  <p><input type="button" id="bt" onclick="login()" value="LOG IN"/></p>
+  <p><span id="success"/></p>
+
+<script>
+function login(){
+if(document.getElementById('us').value == document.getElementById('ps').value){
+  document.getElementById('success').innerHTML = "You logged in successfully!";
+}
+else{
+  document.getElementById('success').innerHTML = "Invalid login.";
+}
+}
+
+</script>
+
 </body>
 
 </html>
